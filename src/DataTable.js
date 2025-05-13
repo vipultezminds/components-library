@@ -1,5 +1,13 @@
 import React, { useState, useMemo } from 'react';
 
+/**
+ * @param {{
+ *   data: Array<object>,
+ *   columns: Array<{ key: string, label: string }>,
+ *   pageSize?: number
+ * }} props
+ */
+
 const DataTable = ({ data, columns, pageSize = 5 }) => {
   const [sortBy, setSortBy] = useState(null);
   const [sortOrder, setSortOrder] = useState('asc');
